@@ -34,7 +34,7 @@ class Agente(object):
         for i in range(len(route) - 1):
             edge_data = G.get_edge_data(route[i], route[i+1])
             length += edge_data[0]['length']  # Asume que la longitud está en edge_data[0]['length']
-        return length
+        return round(length, 2)
 
     def visualizarGrafo(self, G, church_nodes, route):
         # Visualizar la ruta junto con las iglesias
